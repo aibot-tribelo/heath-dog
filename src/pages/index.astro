@@ -1,0 +1,307 @@
+---
+import '../styles/global.css'
+
+const facts = [
+  { emoji: "🥩", title: "Carnivore Supreme", desc: "Meat is not just food. It's a lifestyle. Vegetables are merely garnish that gets pushed to the side." },
+  { emoji: "🫛", title: "Sworn Enemy: Green Peas", desc: "The only thing that strikes fear into this absolute unit. Small, round, green — and absolutely disgusting." },
+  { emoji: "🍸", title: "Grey Goose Connoisseur", desc: "Why drink water when Grey Goose exists? Heathy doesn't sip — he commits." },
+  { emoji: "🎉", title: "Party Boy Incarnate", desc: "If Chris Pontius is Party Boy, Heathy is Party Man. The music plays and the shirt comes off. No exceptions." },
+  { emoji: "💪", title: "Built Like Brock Lesnar", desc: "All the power. All the mass. None of the neck. Just a head sitting directly on two massive trapezius muscles." },
+  { emoji: "🐂", title: "Strong As An Ox", desc: "Rumour has it he once opened a jar of pickles that three other men had failed to open. The jar didn't survive." },
+]
+
+const testimonials = [
+  { quote: "I once saw Heathy eat an entire rotisserie chicken as a starter.", author: "Anonymous Witness" },
+  { quote: "He looked at my salad and genuinely asked if I was feeling okay.", author: "A Concerned Friend" },
+  { quote: "Heathy doesn't have a neck. He has a second set of shoulders.", author: "His Tailor, Probably" },
+  { quote: "The man treats Grey Goose like it's a sports drink.", author: "His Liver" },
+]
+
+const peaFacts = [
+  "Green peas have been banned from a 5-mile radius of Heathy's home",
+  "He once sent back a steak because a pea was on the same plate",
+  "Scientists believe his pea-detection senses are supernatural",
+  "He can smell a pea from 3 rooms away",
+  "His dating profile literally says 'no pea enthusiasts'",
+]
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official home of the Heath Dog Appreciation Society. Celebrating the legend, the myth, the absolute unit." />
+  <title>The Heath Dog Appreciation Society</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-black text-white min-h-screen overflow-x-hidden">
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(212,160,23,0.1) 35px, rgba(212,160,23,0.1) 70px);"></div>
+    </div>
+
+    <!-- Floating emojis -->
+    <div class="absolute top-20 left-10 text-6xl animate-float opacity-30">🥩</div>
+    <div class="absolute top-40 right-16 text-5xl animate-float opacity-30" style="animation-delay: 1s">🍸</div>
+    <div class="absolute bottom-32 left-20 text-5xl animate-float opacity-30" style="animation-delay: 0.5s">💪</div>
+    <div class="absolute bottom-20 right-10 text-6xl animate-shake opacity-30">🫛</div>
+
+    <div class="relative z-10">
+      <p class="text-[--color-gold] font-[family-name:--font-display] uppercase tracking-[0.3em] text-sm mb-4 animate-slide-up">Est. Whenever Heathy First Entered a Room</p>
+
+      <h1 class="font-[family-name:--font-display] text-5xl md:text-8xl font-bold uppercase leading-tight mb-6 animate-glow animate-slide-up" style="animation-delay: 0.2s">
+        The Heath Dog<br/>
+        <span class="text-[--color-gold]">Appreciation Society</span>
+      </h1>
+
+      <p class="font-[family-name:--font-body] text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-8 animate-slide-up" style="animation-delay: 0.4s">
+        Honouring the legend. The myth. The absolute unit.<br/>
+        <span class="text-gray-500 text-lg">Part man. Part Brock Lesnar. Zero neck.</span>
+      </p>
+
+      <div class="animate-slide-up" style="animation-delay: 0.6s">
+        <a href="#facts" class="inline-block bg-[--color-gold] text-black font-[family-name:--font-display] uppercase tracking-wider px-8 py-4 text-lg hover:bg-[--color-gold-dark] transition-all duration-300 hover:scale-105">
+          Enter the Society →
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-[--color-gold] opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- VITAL STATS -->
+  <section class="py-16 bg-zinc-950 border-y border-zinc-800">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl md:text-5xl font-[family-name:--font-display] font-bold text-[--color-gold]">0%</div>
+          <div class="text-gray-500 mt-2 font-[family-name:--font-body] text-sm uppercase tracking-wider">Vegetable Intake</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-[family-name:--font-display] font-bold text-[--color-gold]">0"</div>
+          <div class="text-gray-500 mt-2 font-[family-name:--font-body] text-sm uppercase tracking-wider">Visible Neck</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-[family-name:--font-display] font-bold text-[--color-gold]">∞</div>
+          <div class="text-gray-500 mt-2 font-[family-name:--font-body] text-sm uppercase tracking-wider">Grey Goose Capacity</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-[family-name:--font-display] font-bold text-[--color-gold]">100%</div>
+          <div class="text-gray-500 mt-2 font-[family-name:--font-body] text-sm uppercase tracking-wider">Party Boy Energy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <section id="facts" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="font-[family-name:--font-display] text-4xl md:text-6xl font-bold text-center uppercase mb-4">
+        Know Your <span class="text-[--color-gold]">Heath Dog</span>
+      </h2>
+      <p class="text-gray-500 text-center mb-16 font-[family-name:--font-body]">The essential dossier on Britain's finest specimen</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {facts.map((fact, i) => (
+          <div
+            class="bg-zinc-900 border border-zinc-800 p-8 hover:border-[--color-gold] transition-all duration-300 hover:-translate-y-1 group"
+          >
+            <div class="text-5xl mb-4">{fact.emoji}</div>
+            <h3 class="font-[family-name:--font-display] text-xl uppercase text-[--color-gold] mb-3 group-hover:animate-glow">{fact.title}</h3>
+            <p class="font-[family-name:--font-body] text-gray-400 leading-relaxed">{fact.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTI-PEA ZONE -->
+  <section class="py-24 px-4 bg-gradient-to-b from-black via-green-950/20 to-black relative overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center opacity-5">
+      <span class="text-[20rem]">🫛</span>
+    </div>
+
+    <div class="max-w-4xl mx-auto relative z-10 text-center">
+      <h2 class="font-[family-name:--font-display] text-4xl md:text-6xl font-bold uppercase mb-4">
+        ⚠️ The <span class="text-green-500 line-through decoration-red-500 decoration-4">Pea</span> Problem
+      </h2>
+      <p class="text-gray-400 font-[family-name:--font-body] mb-12 text-lg">
+        A comprehensive record of one man's war against legumes
+      </p>
+
+      <div class="space-y-4">
+        {peaFacts.map((fact, i) => (
+          <div class="bg-zinc-900/80 border border-green-900/30 p-6 flex items-center gap-4 hover:border-red-500/50 transition-colors duration-300">
+            <span class="text-red-500 text-2xl">⛔</span>
+            <p class="font-[family-name:--font-body] text-gray-300 text-left">{fact}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 inline-block bg-red-900/30 border border-red-500/50 px-8 py-4">
+        <p class="font-[family-name:--font-display] text-red-400 uppercase tracking-wider text-lg">
+          🚫 This is a Pea-Free Zone 🚫
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GREY GOOSE SHRINE -->
+  <section class="py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-[family-name:--font-display] text-4xl md:text-6xl font-bold uppercase mb-4">
+        The <span class="text-[--color-gold]">Grey Goose</span> Shrine
+      </h2>
+      <p class="text-gray-400 font-[family-name:--font-body] mb-12">Where lesser men drink water, Heathy reaches for the Goose</p>
+
+      <div class="bg-zinc-900 border border-zinc-800 p-12 relative">
+        <div class="text-8xl mb-6">🍸</div>
+        <blockquote class="font-[family-name:--font-display] text-3xl md:text-4xl text-[--color-gold] italic mb-4">
+          "Grey Goose isn't a drink.<br/>It's a personality trait."
+        </blockquote>
+        <p class="text-gray-500 font-[family-name:--font-body]">— Heathy, probably at 11am on a Tuesday</p>
+
+        <div class="mt-12 grid grid-cols-3 gap-4 max-w-md mx-auto">
+          <div class="bg-black p-4 border border-zinc-800">
+            <div class="text-3xl">🥇</div>
+            <div class="text-xs text-gray-500 mt-2 font-[family-name:--font-body] uppercase">Preferred Spirit</div>
+            <div class="text-[--color-gold] font-[family-name:--font-display] font-bold">Grey Goose</div>
+          </div>
+          <div class="bg-black p-4 border border-zinc-800">
+            <div class="text-3xl">🥈</div>
+            <div class="text-xs text-gray-500 mt-2 font-[family-name:--font-body] uppercase">Backup</div>
+            <div class="text-gray-400 font-[family-name:--font-display] font-bold">Grey Goose</div>
+          </div>
+          <div class="bg-black p-4 border border-zinc-800">
+            <div class="text-3xl">🥉</div>
+            <div class="text-xs text-gray-500 mt-2 font-[family-name:--font-body] uppercase">Emergency</div>
+            <div class="text-gray-500 font-[family-name:--font-display] font-bold">Grey Goose</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-24 px-4 bg-zinc-950">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-[family-name:--font-display] text-4xl md:text-6xl font-bold text-center uppercase mb-16">
+        Witness <span class="text-[--color-gold]">Statements</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        {testimonials.map((t) => (
+          <div class="bg-black border border-zinc-800 p-8 hover:border-[--color-gold]/50 transition-colors duration-300">
+            <div class="text-[--color-gold] text-4xl font-serif mb-4">"</div>
+            <p class="font-[family-name:--font-body] text-gray-300 text-lg italic mb-6">{t.quote}</p>
+            <p class="font-[family-name:--font-display] text-[--color-gold] uppercase text-sm tracking-wider">— {t.author}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTY BOY -->
+  <section class="py-24 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-pink-900/10 to-purple-900/10"></div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="font-[family-name:--font-display] text-4xl md:text-6xl font-bold uppercase mb-6">
+        🎉 Party Boy <span class="text-[--color-gold]">Protocol</span>
+      </h2>
+      <p class="text-gray-400 font-[family-name:--font-body] mb-12 text-lg max-w-2xl mx-auto">
+        When the moment calls for it — and it always calls for it — Heathy channels the spirit of Chris Pontius. The shirt comes off. The music plays. Witnesses are left speechless.
+      </p>
+
+      <div class="bg-zinc-900 border border-zinc-800 p-8 max-w-lg mx-auto">
+        <h3 class="font-[family-name:--font-display] text-[--color-gold] uppercase text-xl mb-6">Party Boy Activation Checklist</h3>
+        <div class="text-left space-y-3 font-[family-name:--font-body]">
+          <div class="flex items-center gap-3 text-gray-300">
+            <span class="text-green-500">✓</span> Music playing (any music, doesn't matter)
+          </div>
+          <div class="flex items-center gap-3 text-gray-300">
+            <span class="text-green-500">✓</span> At least one witness present
+          </div>
+          <div class="flex items-center gap-3 text-gray-300">
+            <span class="text-green-500">✓</span> Grey Goose in system (minimum 2 units)
+          </div>
+          <div class="flex items-center gap-3 text-gray-300">
+            <span class="text-green-500">✓</span> Shirt: removable
+          </div>
+          <div class="flex items-center gap-3 text-gray-300">
+            <span class="text-green-500">✓</span> Shame: none detected
+          </div>
+          <div class="flex items-center gap-3 text-[--color-gold] font-bold mt-4">
+            <span class="text-2xl">🚀</span> PARTY BOY: ACTIVATED
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHYSICAL COMPARISON -->
+  <section class="py-24 px-4 bg-zinc-950 border-t border-zinc-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-[family-name:--font-display] text-4xl md:text-6xl font-bold uppercase mb-12">
+        Heathy vs <span class="text-[--color-gold]">Brock Lesnar</span>
+      </h2>
+
+      <div class="bg-black border border-zinc-800 overflow-hidden">
+        <div class="grid grid-cols-3 text-center font-[family-name:--font-display] uppercase">
+          <div class="p-4 text-[--color-gold] border-b border-zinc-800">Heathy</div>
+          <div class="p-4 text-gray-500 border-b border-x border-zinc-800">Attribute</div>
+          <div class="p-4 text-gray-400 border-b border-zinc-800">Brock Lesnar</div>
+        </div>
+        {[
+          ["Immeasurable", "Strength", "Pretty Strong"],
+          ["Non-existent", "Neck", "Barely There"],
+          ["100%", "Meat Diet", "Probably High"],
+          ["Grey Goose", "Drink of Choice", "Coors Light?"],
+          ["Always Ready", "Party Boy Mode", "N/A"],
+          ["Absolute Zero", "Pea Tolerance", "Unknown"],
+          ["Off the Charts", "Legend Status", "WWE Champion"],
+        ].map(([heath, attr, brock]) => (
+          <div class="grid grid-cols-3 text-center border-b border-zinc-800/50 last:border-0">
+            <div class="p-4 font-[family-name:--font-body] text-[--color-gold]">{heath}</div>
+            <div class="p-4 font-[family-name:--font-body] text-gray-500 border-x border-zinc-800/50 text-sm">{attr}</div>
+            <div class="p-4 font-[family-name:--font-body] text-gray-400">{brock}</div>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-gray-600 font-[family-name:--font-body] text-sm mt-4 italic">
+        * Brock Lesnar comparison used for reference only. Heathy would obviously win.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER / CTA -->
+  <section class="py-24 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-[family-name:--font-display] text-4xl md:text-5xl font-bold uppercase mb-6 animate-glow">
+        Long Live the <span class="text-[--color-gold]">Heath Dog</span>
+      </h2>
+      <p class="font-[family-name:--font-body] text-gray-400 text-lg mb-8">
+        Member of the society since you scrolled this far. Welcome aboard.
+      </p>
+      <div class="text-6xl mb-8">🥩🍸💪🎉</div>
+      <p class="text-gray-600 font-[family-name:--font-body] text-sm">
+        The Heath Dog Appreciation Society™ · No peas were harmed in the making of this website
+        <br/>
+        <span class="text-gray-700">© Forever · All steaks reserved</span>
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
